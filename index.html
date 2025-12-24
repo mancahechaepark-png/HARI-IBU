@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Selamat Hari Ibu 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Comic Sans MS", "Poppins", sans-serif;
+      background: linear-gradient(135deg, #ffd6e8, #fff1c1);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 25px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+      width: 90%;
+      max-width: 380px;
+      animation: pop 0.8s ease;
+      position: relative;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    h1 {
+      color: #ff6f91;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 22px;
+      border: none;
+      border-radius: 30px;
+      background: #ff6f91;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    button:hover {
+      background: #ff4f7a;
+      transform: scale(1.05);
+    }
+
+    .heart {
+      position: absolute;
+      font-size: 18px;
+      animation: float 4s linear forwards;
+      pointer-events: none;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0); opacity: 1; }
+      to { transform: translateY(-600px); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Selamat Hari Ibu 💐</h1>
+
+    <!-- 🖊️ EDIT TEKS DI SINI -->
+    <p>
+      Ma, terima kasih sudah jadi rumah paling hangat di dunia.
+      Terima kasih untuk sabar yang nggak pernah habis,
+      doa yang selalu jalan diam-diam,
+      dan cinta yang nggak minta balasan.
+    </p>
+
+    <p>
+      Aku sayang Mama, hari ini, besok,
+      dan selamanya 🤍
+    </p>
+
+    <button onclick="pelukMama()">Peluk Mama 🤍</button>
+  </div>
+
+  <script>
+    function pelukMama() {
+      for (let i = 0; i < 15; i++) {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.innerText = "💖";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.bottom = "0px";
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 4000);
+      }
+    }
+  </script>
+
+</body>
+  </h
